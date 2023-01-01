@@ -1,13 +1,12 @@
 import { bot } from "./config/index.ts"
 import { webhookCallback, serve } from "./deps.ts"
-import { config } from "./deps.ts";
+import "https://deno.land/x/dotenv/load.ts";
+
 
 const handle = webhookCallback(bot, "std/http");
 
-const env = config();
-
 const webhook = async () => {
-    await console.log(("[INFO]"), `bot is starting on ${env["HOST"]}`);
+    await console.log(("[INFO]"), `bot is starting on ${Deno.env.get("HOST")}`);
     await serve(async (req) => {
       const url = new URL(req.url);
   
@@ -44,7 +43,7 @@ const webhook = async () => {
   };
   
   export const launch = async () => {
-    switch (env["HOST"]) {
+    switch (Deno.env.get("HOST")) {
       case "WEBHOOK":
         await webhook();
         break;
