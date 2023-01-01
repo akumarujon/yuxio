@@ -2,7 +2,7 @@ import { bot } from "./config/index.ts"
 import { webhookCallback, serve } from "./deps.ts"
 import { config } from "https://deno.land/x/dotenv/mod.ts";
 
-export const handle = webhookCallback(bot, "std/http");
+const handle = webhookCallback(bot, "std/http");
 
 const env = config();
 
