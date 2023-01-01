@@ -1,6 +1,6 @@
 import { bot } from "./config/index.ts"
 import { webhookCallback, serve } from "./deps.ts"
-import { config } from "https://deno.land/x/dotenv/mod.ts";
+import { config } from "./deps.ts";
 
 const handle = webhookCallback(bot, "std/http");
 
