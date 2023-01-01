@@ -15,5 +15,5 @@ serve(async (req) => {
       }
     }
   }
-  return new Response();
+  return new Response("Hi There!");
 });
