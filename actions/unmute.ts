@@ -23,9 +23,7 @@ bot.command('unmute', async ctx => {
             await bot.api.restrictChatMember(msg.chat.id, replied_user.id, permissions);
             await ctx.reply(`${replied_user.first_name} mute qilindi!`);
         }else{
-            await ctx.reply("Bu foydalanuvchini mute qilib bo'lmaydi!");
+            await ctx.reply("Bu foydalanuvchini unmute qilib bo'lmaydi!");
         }
     }   
 })
-
-//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
