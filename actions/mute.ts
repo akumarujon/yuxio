@@ -4,6 +4,7 @@ bot.command("mute", async (ctx) => {
   let msg = ctx.message;
 
   // user  who typed command
+  
   let command_user = msg.from;
   // user who got replied
   let replied_user = msg.reply_to_message.from;
@@ -21,7 +22,7 @@ bot.command("mute", async (ctx) => {
   let permissions = {
     can_send_messages: false,
   };
-
+  console.log(replied_user_status.status)
   if (msg.reply_to_message) {
     if (command_user_status.status == "member") {
       await ctx.reply("Oddiy a'zolar mute bera olishmaydi!");
