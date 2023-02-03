@@ -1,5 +1,4 @@
-import { bot } from "../config/bot.ts"
+import { bot } from "../config/bot.ts";
 
-bot.command("admin", ctx => {
-
-})
+bot.command("admin", (ctx) => {
+});

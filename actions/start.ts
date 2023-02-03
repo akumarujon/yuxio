@@ -1,7 +1,7 @@
-import { bot } from "../config/index.ts"
+import { bot } from "../config/index.ts";
 
-bot.command('start', ctx => {
-    ctx.reply(
-        `Assalomu alaykum ${ctx.message.from.first_name}`
-    )
-})
+bot.command("start", (ctx) => {
+  ctx.reply(
+    `Assalomu alaykum ${ctx.message.from.first_name}`,
+  );
+});
