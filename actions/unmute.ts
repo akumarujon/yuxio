@@ -38,4 +38,18 @@ bot.command("unmute", async (ctx) => {
   }
 });
 
+<<<<<<< HEAD
 //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
+=======
+    if(command_user_status.status=="member"){
+        await ctx.reply("Oddiy a'zolar mute bera olishmaydi!");
+    }else{
+        if(replied_user_status.status=="member"){
+            await bot.api.restrictChatMember(msg.chat.id, replied_user.id, permissions);
+            await ctx.reply(`${replied_user.first_name} mute qilindi!`);
+        }else{
+            await ctx.reply("Bu foydalanuvchini unmute qilib bo'lmaydi!");
+        }
+    }   
+})
+>>>>>>> 0fd3288431ed86b4f0c7f669453188451f3f79ee
