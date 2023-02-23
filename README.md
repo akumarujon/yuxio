@@ -1,1 +1,1 @@
-## Yuxio - awesome bot to control the group.
+## Yuxio - awesome bot to control the telegram group.
